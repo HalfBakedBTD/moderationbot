@@ -25,7 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setGame(`with ${bot.guilds.size} servers. | :help.`);
+  bot.user.setGame(`exoticly. | -help.`);
 });
 
 bot.on("message", async message => {
