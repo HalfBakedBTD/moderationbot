@@ -4,7 +4,7 @@ exports.run = async (bot, message, args) => {
   let botEmbed = new Discord.RichEmbed()
   .setColor('#fff200')
   .setTitle("Bot Commands:")
-  .setDescription("`-help` shows help message.");
+  .setDescription("`-help` shows help message.\n\n`-ban` bans a user.\n`-kick` kicks a user.");
   message.channel.send(botEmbed)
 }
 	      
