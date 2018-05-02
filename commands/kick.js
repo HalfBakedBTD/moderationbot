@@ -19,7 +19,7 @@ exports.run = async (bot, message, args) => {
     message.guild.member(kUser).kick(kReason);
     //kickChannel.send(`👢 USER KICKED 👢\n\nKicked: <@${kUser.id}>\n\nPunisher: <@${message.author.id}>\n\nKicked In: ${message.channel}\n\nReason: ${kReason}`);
     let banEmbed = new Discord.RichEmbed()
-    .setTitle("🔨 USER BANNED 🔨")
+    .setTitle("👢 USER KICKED 👢")
     .setThumbnail("https://tse2.mm.bing.net/th?id=OIP.6BSojMB2lSw1jTZCtC_BIgHaHa&pid=Api")
     .setColor("#2f3640")
     .setDescription(`**Kicked User:** ${kUser}\n**Kicked By:** <@${message.author.id}>\n**Banned In:** ${message.channel}\n**Reason:** ${kReason}`);
