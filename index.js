@@ -25,7 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
 
-  bot.user.setGame(`exoticly. | -help.`);
+  bot.user.setGame(`Minecraft | .help`);
 });
 
 bot.on("message", async message => {
@@ -35,7 +35,7 @@ bot.on("message", async message => {
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
   if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
-      prefixes: '-'
+      prefixes: '.'
     };
   }
   
