@@ -3,6 +3,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 const ms = require("ms");
+let fight = require("./fight.json");
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -37,6 +38,20 @@ bot.on("message", async message => {
     prefixes[message.guild.id] = {
       prefixes: '.'
     };
+  }
+  
+  if (!fight[message.author.id]) {
+    fight[message.author.id] = {
+      fight: 1,
+      health: 20,
+      turn: 1,
+      opponent: 'NONE',
+      spending: 'NONE',
+      rpending: 'NONE',
+      attack: 0,
+      defence: 0,
+      ability: 'NONE'
+    }
   }
   
   let prefix = prefixes[message.guild.id].prefixes;
